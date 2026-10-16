@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS Web 1 - Layout Responsif | UNPAM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER FLEXBOX -->
+    <header class="header-unpam">
+        <h1>UNPAM WEB</h1>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#materi">Materi</a></li>
+                <li><a href="#anggota">Anggota</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION - BARU DI 3.9 -->
+    <section class="hero-unpam" id="beranda">
+        <h2>Belajar Web Development Dasar</h2>
+        <p>HTML5 Semantik, CSS3 Modern, dan Framework Terkini untuk Mahasiswa Teknik Informatika UNPAM</p>
+        <a href="#materi" class="btn-hero">Mulai Belajar</a>
+    </section>
+
+    <!-- MAIN GRID -->
+    <main>
+        <!-- 3 KARTU UTAMA - INI YANG JADI GRID RESPONSIF -->
+        <div class="kartu-grid" id="materi">
+            <article class="card">
+                <h3>HTML5 Semantik</h3>
+                <p>HTML5 adalah <strong>bahasa markup standar</strong> untuk membangun struktur website yang valid dan bermakna bagi mesin pencari.</p>
+            </article>
+            <article class="card">
+                <h3>CSS3 Modern</h3>
+                <p>CSS3 dengan <em>Flexbox dan Grid</em> memungkinkan pembuatan layout kompleks yang <mark>responsif</mark> tanpa hack.</p>
+            </article>
+            <article class="card">
+                <h3>Framework Terkini</h3>
+                <p>Bootstrap 5 dan Tailwind CSS mempercepat produktivitas dengan sistem komponen dan utility-first.</p>
+            </article>
+        </div>
+
+        <!-- TABEL ANGGOTA -->
+        <section id="anggota">
+            <h3>Daftar Anggota Kelompok 2</h3>
+            <table>
+                <caption>Anggota Kelompok 2 UTS Pemrograman Web 1</caption>
+                <thead>
+                    <tr><th scope="col">No</th><th scope="col">Nama Lengkap</th><th scope="col">NIM</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Fauzan Al Fasyah</td><td>241011400787</td></tr>
+                    <tr><td>2</td><td>Muhammad Arif Rifan</td><td>241011402694</td></tr>
+                    <tr><td>3</td><td>Zidan Putera Ripahwandi</td><td>241011400798</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- VIDEO & FORM -->
+        <section class="grid-2">
+            <div>
+                <h3>Video Pengenalan</h3>
+                <video controls poster="images/poster.jpg">
+                    <source src="media/pengenalan-web.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="kontak">
+                <h3>Formulir Kontak</h3>
+                <form>
+                    <fieldset>
+                        <legend>Hubungi Kami</legend>
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" required placeholder="Masukkan nama">
+                        <label for="email">Email UNPAM:</label>
+                        <input type="email" id="email" required placeholder="nama@unpam.ac.id">
+                        <button type="submit">Kirim Data</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Teknik Informatika UNPAM. Dibuat dengan HTML5 Semantik & CSS3 Grid.</p>
+    </footer>
+</body>
+</html>

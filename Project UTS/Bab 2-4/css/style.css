@@ -1,0 +1,224 @@
+/* ========================================= */
+/* BAB 3 - FINAL CSS RESPONSIF - 3.9 */
+/* ========================================= */
+:root {
+    --primary: #0d6efd;
+    --kuning-unpam: #ffc107;
+    --dark: #212529;
+    --radius: 14px;
+    --jarak: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    background-color: hsl(210, 20%, 98%);
+    color: #343a40;
+}
+
+/* 3.2 & 3.4 - HEADER FLEXBOX */
+.header-unpam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--dark);
+    color: white;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-unpam h1 {
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.header-unpam nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.header-unpam nav a {
+    color: var(--kuning-unpam);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.header-unpam nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* 3.6 & 3.7 - HERO DENGAN GRADIENT */
+.hero-unpam {
+    background: linear-gradient(135deg, var(--kuning-unpam) 0%, #ff9800 100%);
+    padding: 5rem 1rem;
+    text-align: center;
+    color: var(--dark);
+}
+
+.hero-unpam h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.2;
+    text-wrap: balance;
+    margin-bottom: 1rem;
+}
+
+.hero-unpam p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.1rem;
+}
+
+.btn-hero {
+    display: inline-block;
+    background: var(--dark);
+    color: white;
+    padding: 12px 28px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* 3.5 - GRID LAYOUT */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+    display: grid;
+    gap: 2.5rem;
+}
+
+.kartu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+/* 3.3 & 3.7 - CARD DENGAN BOX MODEL & SHADOW */
+.card, table, form, video {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.card:hover, table:hover, form:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+.card h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--primary);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+table th {
+    background: var(--dark);
+    color: white;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px 0;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(13,110,253,0.15);
+}
+
+form button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+video, img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--dark);
+    color: #adb5bd;
+    margin-top: 2rem;
+}
+
+/* 3.8 - RESPONSIVE DENGAN MEDIA QUERY */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main section {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@media (min-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-unpam {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-unpam {
+        padding: 3rem 1rem;
+    }
+}
